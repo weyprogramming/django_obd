@@ -10,7 +10,7 @@ from rest_framework.permissions import IsAdminUser, AllowAny
 class MeasurementViewSet(viewsets.ModelViewSet):
     serializer_class = MeasurementSerializer
     queryset = Measurement.objects.all()
-    permission_classes = [AllowAny]
+    permission_classes = [IsAdminUser]
 
 
 class MeasurementPointViewSet(viewsets.ModelViewSet):
